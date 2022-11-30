@@ -1,0 +1,156 @@
+@import './../../styles/variables'
+
+.checkout-page
+  padding: 138px 0 50px
+  background: #F7F7F7
+  display: flex
+  gap: 55px
+  justify-content: center
+
+.checkout-left
+  position: relative
+
+.checkout-block
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08)
+  padding: 30px
+  background: white
+  margin-bottom: 20px
+  width: 540px
+  margin: 0 auto 20px
+
+.checkout-block__top
+  display: flex
+  font-weight: 700
+  align-items: center
+  margin-bottom: 35px
+
+.checkout-block__number
+  color: white
+  width: 35px
+  height: 35px
+  display: block
+  text-align: center
+  line-height: 35px
+  margin-right: 15px
+  border-radius: 50%
+  background: $green-color
+
+.checkout-block__add
+  margin-left: auto
+  text-decoration: none
+  margin-bottom: 0
+  font-size: 13px
+  color: $green-color
+
+.checkout-block__items
+  display: grid
+  grid-gap: 15px
+  grid-template-columns: repeat(3,1fr)
+
+.checkout-block__item
+  position: relative
+  background: #F7F7F7
+  cursor: pointer
+  border-radius: 6px
+  padding: 13px
+  border: 1px solid transparent
+  .small-title
+    margin-bottom: 15px
+  &:hover 
+    .checkout-block__btns
+      display: flex
+  &.active
+    border: 1px solid $green-color
+
+
+.checkout-block__item-text
+  margin-bottom: 0
+
+.checkout-block__btns
+  position: absolute
+  transition: .5s ease
+  top: 10px
+  right: 10px
+  display: none
+
+.checkout-block__btn
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  background: #FF5B60
+  display: flex
+  img 
+    margin: auto
+  &.checkout-block__btn-edit
+    background: $green-color
+    margin-right: 8px
+
+.checkout-list
+  margin-top: 50px
+  padding-bottom: 10px
+  border-bottom: 1px solid #E6E6E6
+  span 
+    font-weight: 700
+
+.checkout-list__item
+  display: grid
+  grid-template-columns: auto 160px auto
+  margin-bottom: 20px
+  align-items: center
+  justify-content: space-between
+  &:last-child
+    margin-bottom: 10px
+  span 
+    margin-right: 10px
+
+.checkout-right__body
+  padding: 20px 0
+  
+.checkout-right__key-val
+  width: 100%
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.checkout-right__total
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .gray-title,.checkout-title
+    font-size: 14px
+
+.checkout-form
+  position: absolute
+  left: 0
+  z-index: 20
+  top: 0
+  width: 100%
+  background: white
+  padding: 30px
+
+.checkout-input
+  width: 100%
+  margin-bottom: 15px
+  margin-top: 15px
+  padding: 0 20px
+  &.checkout-textarea
+    resize: none
+    overflow: hidden
+    height: 300px
+    max-height: unset
+
+.checkout-close-btn
+  position: absolute
+  z-index: 30
+  right: 10px
+  top: 10px
+
+.checkout-submit
+  padding-top: 30px
+  .gray-title
+    margin-bottom: 30px
+
+.checkout-btn
+  width: 100%
+  &:disabled
+    opacity: 0.5

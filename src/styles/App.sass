@@ -1,0 +1,419 @@
+@import './variables'
+
+body
+  font-family: 'Lato', sans-serif
+  font-size: 15px
+
+*
+  box-sizing: border-box
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li 
+  margin: 0
+  padding: 0
+
+h1,h2,h3,h4,h5
+  margin: 0
+
+button
+  cursor: pointer
+  border: none
+  background: transparent
+
+.btn
+  height: 37px
+  line-height: 37px
+  text-decoration: none
+  border-radius: 6px
+  color: white
+  font-size: 14px
+  font-weight: 700
+  outline: none
+  border: none
+  background: $green-color
+  cursor: pointer
+  text-align: center
+  transition: .5s ease
+  &.btn--coupon
+    padding: 15px 30px
+    background: white
+    color: #FC8C77
+    font-size: 20px
+    border-radius: 180px
+  &.btn--modal
+    width: 100%
+  &.btn-auth-modal
+    width: 100%
+    margin-bottom: 15px
+    height: 48px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: white
+    text-decoration: none
+  &.btn-auth-fb
+    background: #4267B2
+  &.btn-auth-google
+    background: #4286F4
+  &.btn-product
+    background: transparent
+    color: $green-color
+    display: flex
+    align-items: center
+    border: 1px solid #F7F7F7
+    border-radius: 85px
+    padding: 0 20px
+    path 
+      transition: .5s ease
+    &:disabled
+      opacity: 0.4
+    &:hover
+      background: $green-color
+      color: white
+      path 
+        transition: .5s ease
+        fill: white
+          
+    svg
+      margin-right: 5px
+  &.btn-white
+    background: white
+    color: $green-color
+    padding: 0 34px
+    border: 1px solid transparent
+    &:hover
+      background: $green-color
+      color: white
+      border: 1px solid white
+  &.btn-tag
+    background: #F7F7F7
+    border-radius: 6px
+    height: 30px
+    line-height: 30px
+    padding: 0 40px
+    color: #0D1136
+    text-decoration: none
+
+.auth-icon
+  margin-right: 10px
+
+.container-lg
+  width: 100%
+  max-width: 2440px
+  margin: 0 auto
+  &.flex
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  @media screen and (max-width: 2440px)
+    max-width: 1340px
+
+.input
+  height: 48px
+  max-height: 48px
+  line-height: 48px
+  background: #F3F3F3
+  border-radius: 6px
+  border: 1px solid transparent
+  &:focus
+    border: 1px solid #009E7F
+    outline: none
+  &:placeholder
+    color: rgba($gray-color, 50%)
+
+.title
+  font-weight: 700
+  font-family: $poppins
+  text-align: center
+  font-size: 45px
+  margin-bottom: 5px
+
+.sub-title
+  font-size: 19px
+  color: $light-gray-color
+  opacity: 0.4
+  text-align: center
+  font-weight: 400
+  &.sub-title--modal
+    font-size: 15px
+    margin: 10px 0 30px
+    opacity: 1
+    &.sub-title--modal-terms
+      margin-top: 30px
+      font-size: 13px
+
+.small-title
+  font-size: 15px
+  font-weight: 700
+  color: #0D1136
+  white-space: nowrap
+
+.large-title
+  font-size: 21px
+  font-weight: 700
+  line-height: 31.5px
+
+.gray-title
+  color: $light-gray-color
+  font-size: 13px
+  line-height: 16px
+
+.checkout-title
+  font-size: 19px
+  margin-bottom: 0
+  font-weight: 700
+
+.price
+  font-weight: 700
+  font-size: 15px
+  color: $green-color
+
+.smaller-title
+  font-size: 13px
+  font-weight: 700
+  color: #0D1136
+  white-space: nowrap
+  &.smaller-title--grey
+    color: #77798C
+    position: relative
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 10px
+      height: 2px
+      background: #77798C
+      left: -16px
+      top: calc(50% - 1px)
+    &:hover 
+      color: $green-color
+
+
+// nav 
+
+.nav
+  padding: 15px 0
+  position: fixed
+  left: 0
+  right: 0
+  background: white
+  z-index: 10
+
+.logo
+  margin-right: 30px
+
+.search-from-control
+  position: relative
+
+.search-btn
+  position: absolute
+  left: 15px
+  top: calc(50% - 7px)
+  width: 14px
+  height: 14px
+  background: url('./../assets/search-icon.svg')
+  background-size: cover
+  border: none
+  cursor: pointer
+
+.nav-input
+  width: 630px
+  padding: 0 44px
+
+.modal-input
+  width: 100%
+  padding: 0 20px
+
+.login-group
+  margin-left: auto
+
+.auth-btn
+  width: 66px
+
+// hero section
+
+.hero-section
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: url('./../assets/hero-bg.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  .container-lg
+    flex-direction: column
+
+// modal 
+
+.form-control--modal
+  margin-bottom: 10px
+
+// coupons
+
+.swiper-container
+  width: 100%
+  overflow: unset!important
+
+.swiper-button-prev, .swiper-button-next
+  position: absolute
+  top: calc(50% - 20px)
+  left: -20px
+  width: 40px
+  height: 40px
+  z-index: 99
+  border-radius: 50%
+  background: white
+  box-shadow: 0px 3px 6px 0px #00000029
+  &::after
+    content: ''
+    position: absolute
+    height: 13px
+    width: 7.5px
+    background: url('./../assets/arrow.svg')
+    background-size: cover
+    top: calc(50% - 6.5px)
+    
+    left: calc(50% - 4.75px)
+
+.swiper-button-next
+  right: -20px
+  left: unset
+  &:after 
+    transform: rotate(180deg)
+
+// cart
+
+.cart-wrapper
+  &.is-cart-open
+    .cart-trigger
+      right: -100%
+    .cart
+      right: 0
+
+.cart-trigger
+  cursor: pointer
+
+.cart
+  position: fixed
+  height: 100%
+  right: -100%
+  width: 420px
+  z-index: 30
+  background: white
+  transition: 1s ease
+  box-shadow: 0px 21px 36px rgba(0, 0, 0, 0.16)
+  display: grid
+  grid-template-rows: auto 1fr auto
+  height: 100%
+
+.cart__top
+  padding: 15px 25px
+  border-bottom: 1px solid #F1F1F1
+  display: flex
+  justify-content: space-between
+  color: $green-color
+  .cart-items__number
+    font-weight: 700
+
+.empty-cart
+  padding-top: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: 100%
+
+
+.cart-trigger
+  position: fixed
+  transition: 1s ease
+  right: 0
+  top: 50%
+  z-index: 20
+  background: $green-color
+  padding: 10px
+  color: white
+  font-size: 12px
+  border-radius: 6px 0px 0px 6px
+  .cart-items
+    margin-bottom: 30px
+
+.cart-items
+  display: flex
+  gap: 5px
+  align-items: center
+
+.cart-items__number
+  font-size: 12px
+  margin-bottom: 0
+
+.cart__footer
+  padding: 25px 15px
+
+a.bar
+  background: $green-color
+  border-radius: 85px
+  border: 1px solid $green-color
+  display: flex
+  text-decoration: none
+  justify-content: space-between
+  align-items: center
+  padding-left: 25px
+  span
+    color: white
+    text-decoration: none
+  &.disabled
+    opacity: 0.5
+    cursor: auto
+    pointer-events: none
+
+.bar__price
+  background: white
+  padding: 14px 25px
+  border-radius: 85px
+  color: $green-color
+  height: 100%
+
+.cart__item
+  padding: 16px 25px
+  border-bottom: 1px solid #F1F1F1
+  display: grid
+  grid-template-columns: auto auto 1fr auto auto
+  grid-gap: 15px
+  align-items: center
+
+.cart__item-btns
+  display: flex
+  flex-direction: column
+
+.cart__item-btn
+  width: 30px
+  height: 30px
+  border-radius: 200px 200px 0 0
+  background: #F7F7F7
+  color: #77798C
+  font-size: 15px
+  &.cart__item-btn--minus
+    border-radius: 0 0 200px 200px 
+
+.cart__item-count
+  flex: 1
+  background: #F7F7F7
+  margin-bottom: 0
+  text-align: center
+  font-size: 15px
+  font-weight: 700
+
+.cart__item-img
+  img 
+    width: 60px
+    height: 60px
+    object-fit: cover
+
+.cart__item-total
+  .small-title
+    margin-bottom: 0

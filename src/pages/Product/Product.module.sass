@@ -1,0 +1,64 @@
+.productPage
+  padding-top: 108px
+  background: #F7F7F7
+
+.product
+  display: grid
+  flex: 1
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 6px
+  margin-bottom: 120px
+
+.productLeft
+  background: white
+  padding-bottom: 28px
+
+.productHeader
+  display: flex
+  justify-content: center
+  margin-bottom: 20px
+
+.mainImg
+  width: 269px
+  height: 330px
+  object-fit: cover
+  border-radius: 15px
+  margin-top: 10px
+
+.productGallery
+  display: flex
+  justify-content: center
+  gap: 25px
+
+.galleryItem
+  width: 83px
+  height: 68px
+  padding: 5px
+  cursor: pointer
+  border-radius: 6px
+  border: 1px solid #F1F1F1
+  display: flex
+  img 
+    max-width: 100%
+    margin: auto
+    max-height: 100%
+    object-fit: cover
+  &.active 
+    border: 2px solid #009E7F
+
+.productRight
+  padding: 50px 136px
+  background: white
+
+.infoLine
+  display: flex
+  align-items: center
+  gap: 140px
+
+.descr
+  margin-top: 30px
+  margin-bottom: 120px
+
+.tagsWrapper
+  margin-top: 30px
+  display: flex

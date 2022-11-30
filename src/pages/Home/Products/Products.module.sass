@@ -1,0 +1,49 @@
+@import  './../../../styles/variables'
+
+.productsSection
+  display: grid
+  grid-template-columns: 280px 1fr
+  grid-gap: 30px
+  background: #F7F7F7
+
+.sidebar
+  background: white
+  padding: 50px 70px 50px 50px
+
+.listItem
+  margin-bottom: 15px
+  &.active, &:hover
+    >.listLink
+      color: $green-color
+      span
+        color: $green-color
+      path
+        fill: $green-color
+
+.listLink
+  text-decoration: none
+  display: flex
+  
+.catImg
+  margin-right: 15px
+  path
+    fill: black
+    
+
+
+.subList
+  margin-top: 15px
+  margin-left: 45px
+
+.main
+  padding: 30px 30px 60px 0
+
+.productWrapper
+  display: grid
+  grid-template-columns: repeat( auto-fill, minmax(400px, 1fr) )
+  gap: 30px
+  padding-bottom: 30px
+
+.btnWrapper
+  display: flex
+  justify-content: center
